@@ -70,42 +70,6 @@ class Block {
     Returns: [status]
         bool: Whether the function is successful or failed.''',
     ),
-    Block(
-      name: 'Mouse Move',
-      blockXml:
-          '<block type="mouse_move"> <field name="type_of_movement">abs</field> <field name="status" id="A3JH(F4iaa#67-C,*iE">STATUS</field> <value name="x"> <block type="math_number"> <field name="NUM">10</field> </block> </value> <value name="y"> <block type="math_number"> <field name="NUM">20</field> </block> </value> </block>',
-      keywords: ['mouse', 'move'],
-      shortDescription: 'Moves the cursor to the given X Y Co-ordinates.',
-      fullDescription: '''Moves the cursor to the given X Y Co-ordinates.
-    Args:
-        x (int): x-coordinate on screen.
-        Eg: 369 or 435, Defaults: ''.
-        y (int): y-coordinate on screen.
-        Eg: 369 or 435, Defaults: ''.
-        type_of_movement (str, optional): Type of movement.
-    Returns: [status]
-        bool: Whether the function is successful or failed.
-''',
-    ),
-    Block(
-      name: 'Mouse Drag',
-      blockXml:
-          '<block type="mouse_drag_from_to"> <field name="status" id="A3JH(F4iaa#67-C,*iE">STATUS</field> <value name="x1"> <block type="math_number"> <field name="NUM">10</field> </block> </value> <value name="y1"> <block type="math_number"> <field name="NUM">10</field> </block> </value> <value name="x2"> <block type="math_number"> <field name="NUM">500</field> </block> </value> <value name="y2"> <block type="math_number"> <field name="NUM">500</field> </block> </value> </block>',
-      keywords: ['mouse', 'drag'],
-      shortDescription: '',
-      fullDescription:
-          '''Clicks and drags from x1 y1 co-ordinates to x2 y2 Co-ordinates on the screen
-    Args:
-        x1 or x2 (int): x-coordinate on screen.
-        Eg: 369 or 435, Defaults: ''.
-        y1 or y2 (int): y-coordinate on screen.
-        Eg: 369 or 435, Defaults: ''.
-        delay (float, optional): Seconds to wait while performing action.
-        Eg: 1 or 0.5, Defaults to 0.5.
-    Returns: [status]
-        bool: Whether the function is successful or failed.
-''',
-    ),
 
 // Keyboard Blocks 3
     Block(
@@ -269,24 +233,6 @@ class Block {
     Returns: [status]
         bool: Whether the function is successful or failed.''',
     ),
-    Block(
-      blockXml:
-          '<block type="file_get_json_details"> <field name="status" id="m,f^=#eZ|R*fFAlBL_f">STATUS</field> <field name="data" id="!r=cbAny(v?V_m[/yjz4">DATA</field> <value name="path_of_json_file"> <block type="text"> <field name="TEXT"></field> </block> </value> <value name="section"> <block type="text"> <field name="TEXT"></field> </block> </value> </block>',
-      name: 'Get JSON Data',
-      keywords: ['json', 'get', 'data'],
-      shortDescription:
-          'Returns all the details of the given section in a dictionary',
-      fullDescription:
-          '''Returns all the details of the given section in a dictionary
-    Args:
-        path_of_json_file (str, optional): Path of the json file.
-        Eg: D:\\Files\\Text.txt, Defaults to "".
-        section (str, optional): Section of the json file.
-        Eg: Text.txt, Defaults to "".
-    Returns: [status,data]
-        bool: Whether the function is successful or failed.
-        data: Data of the given section in a dictionary.''',
-    ),
 
 // Windows Blocks 9
     Block(
@@ -325,18 +271,7 @@ class Block {
     Returns:
         bool: Whether the function is successful or failed.''',
     ),
-    Block(
-      blockXml:
-          '<block type="window_restore_windows"> <field name="status" id=":ulA-E6LLi-c7ikn!(%">STATUS</field> <value name="windowName"> <block type="text"> <field name="TEXT">Notepad</field> </block> </value> </block>',
-      name: 'Restore Window',
-      keywords: ['restore', 'window'],
-      shortDescription: 'Restores the given window',
-      fullDescription: '''Restores the given window.
-    Args:
-        windowName (str, optional): Name of the window you want to restore.
-        Eg: Notepad. Defaults to "".
-    Returns: [status]''',
-    ),
+
     Block(
       blockXml:
           '<block type="window_maximize_windows"> <field name="status" id=":ulA-E6LLi-c7ikn!(%">STATUS</field> <value name="windowName"> <block type="text"> <field name="TEXT">Notepad</field> </block> </value> </block>',
@@ -1078,34 +1013,7 @@ class Block {
         bool : [status] Whether the operation is successful or not.
   ''',
     ),
-    Block(
-      blockXml:
-          '''<block type="excel_copy_range_from_sheet_new">        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>        <field name="data" id="H@JeN;pf,Rpec+P9x`U4">COPIED_DATA</field>        <value name="input_filepath">            <block type="text">                <field name="TEXT">Filepath</field>            </block>        </value>        <value name="input_sheetname">            <block type="text">                <field name="TEXT">Sheet 1</field>            </block>        </value>        <value name="start_col">            <block type="math_number">                <field name="NUM">1</field>            </block>        </value>        <value name="start_row">            <block type="math_number">                <field name="NUM">1</field>            </block>        </value>        <value name="end_col">            <block type="math_number">                <field name="NUM">3</field>            </block>        </value>        <value name="end_row">            <block type="math_number">                <field name="NUM">3</field>            </block>        </value>        <next>            <block type="excel_paste_range_to_sheet">                <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>                <value name="input_filepath">                    <block type="text">                        <field name="TEXT">Filepath</field>                    </block>                </value>                <value name="input_sheetname">                    <block type="text">                        <field name="TEXT">Sheet 1</field>                    </block>                </value>                <value name="start_col">                    <block type="math_number">                        <field name="NUM">1</field>                    </block>                </value>                <value name="start_row">                    <block type="math_number">                        <field name="NUM">1</field>                    </block>                </value>                <value name="copied_data">                    <block type="variables_get">                        <field name="VAR" id="H@JeN;pf,Rpec+P9x`U4">COPIED_DATA</field>                    </block>                </value>            </block>        </next>    </block>''',
-      name: 'Excel Copy Range From Sheet',
-      keywords: [
-        'Excel Copy Range From Sheet',
-        'Excel',
-        'Copy',
-        'Range',
-        'From Sheet',
-        'Copy Range From Sheet'
-      ],
-      shortDescription: '',
-      fullDescription: '''
-    Description:
-        Copies range from excel
-    Args:
-        input_filepath (str)         : Filepath of the excel file.
-        input_sheetname (str)         : Sheet name of the excel file.
-        start_col (int)         : Start column of the range.
-        start_row (int)         : Start row of the range.
-        end_col (int)         : End column of the range.
-        end_row (int)         : End row of the range.
-    Returns:
-        bool : [status] Whether the operation is successful or not.
-        data : [data] Data of the excel file.
-  ''',
-    ),
+
     Block(
       blockXml:
           '''<block type="excel_get_all_header_columns_new">        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>        <field name="data" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>        <value name="df">            <block type="variables_get">                <field name="VAR" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>            </block>        </value>    </block>''',
@@ -1239,104 +1147,7 @@ class Block {
         data : [data] Data of the excel file.
   ''',
     ),
-    Block(
-      blockXml:
-          '''<block type="excel_group_by_column_values_n_split_new">        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>        <value name="df">            <block type="variables_get">                <field name="VAR" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>            </block>        </value>        <value name="column_name">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="output_folder">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="output_filename">            <block type="text">                <field name="TEXT"></field>            </block>        </value>    </block>''',
-      name: 'Excel Group By Column Values and Split',
-      keywords: [
-        'Excel Group By Column Values N Split',
-        'Excel',
-        'Group By',
-        'Split',
-        'Column Values',
-        'Values',
-        'Split',
-        'Dataframe',
-      ],
-      shortDescription: '',
-      fullDescription: '''
-    Description:
-        Groups by column values and splits the data into multiple excel files
-    Args:
-        df (dataframe) : Dataframe to be converted.
-        column_name (str)         : Column name to be grouped.
-        output_folder (str)         : Output folder path.
-        output_filename (str)         : Output filename.
-    Returns:
-        bool : [status] Whether the operation is successful or not.
-        data : [data] Data of the excel file.
-  ''',
-    ),
-    Block(
-      blockXml:
-          ''' <block type="excel_if_value_exists_new">        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>        <value name="df">            <block type="variables_get">                <field name="VAR" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>            </block>        </value>        <value name="cols">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="value">            <block type="text">                <field name="TEXT"></field>            </block>        </value>    </block>''',
-      name: 'Excel If Value Exists',
-      keywords: [
-        'Excel If Value Exists',
-        'Excel',
-        'Value Exists',
-        'Value',
-        'Exists',
-        'Dataframe',
-      ],
-      shortDescription: '',
-      fullDescription: '''
-    Description:
-        Checks if value exists in excel
-    Args:
-        df (dataframe) : Dataframe to be converted.
-        cols (str)         : Column name to be checked.
-        value (str)         : Value to be checked.
-    Returns:
-        bool : [status] Whether the operation is successful or not.
-        data : [data] Data of the excel file.
-  ''',
-    ),
-    Block(
-      blockXml:
-          '''<block type="excel_apply_template_format_new">        <field name="same_file">TRUE</field>        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>        <value name="input_filepath">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="input_sheetname">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="input_template_filepath">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="input_template_sheetname">            <block type="math_number">                <field name="NUM">0</field>            </block>        </value>        <value name="output_folder">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="output_filename">            <block type="text">                <field name="TEXT"></field>            </block>        </value>    </block>''',
-      name: 'Excel Apply Template Format',
-      keywords: [
-        'Excel Apply Template Format',
-        'Excel',
-        'Template',
-        'Format',
-        'Apply'
-      ],
-      shortDescription: '',
-      fullDescription: '''
-    Description:
-        Applies template format to excel
-    Args:
-        input_filepath (str)         : Input excel file path.
-        input_sheetname (str)         : Input excel sheet name.
-        input_template_filepath (str)         : Input template excel file path.
-        input_template_sheetname (str)         : Input template excel sheet name.
-        output_folder (str)         : Output folder path.
-        output_filename (str)         : Output filename.
-    Returns:
-        bool : [status] Whether the operation is successful or not.
-        data : [data] Data of the excel file.
-  ''',
-    ),
-    Block(
-      blockXml:
-          '''<block type="excel_merge_all_files_new">        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>        <value name="input_filepath">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="output_folder">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="output_filename">            <block type="text">                <field name="TEXT"></field>            </block>        </value>    </block>''',
-      name: 'Excel Merge All Files',
-      keywords: ['Excel Merge All Files', 'Excel', 'Merge', 'All', 'Files'],
-      shortDescription: '',
-      fullDescription: '''
-    Description:
-        Merges all excel files into one
-    Args:
-        input_filepath (str)         : Input excel file path.
-        output_folder (str)         : Output folder path.
-        output_filename (str)         : Output filename.
-    Returns:
-        bool : [status] Whether the operation is successful or not.
-        data : [data] Data of the excel file.
-  ''',
-    ),
+
     Block(
       blockXml:
           '''<block type="excel_create_file_new">        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>        <value name="output_sheetname">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="output_folder">            <block type="text">                <field name="TEXT"></field>            </block>        </value>        <value name="output_filename">            <block type="text">                <field name="TEXT"></field>            </block>        </value>    </block>''',
@@ -1523,22 +1334,7 @@ class Block {
       bool: Whether the function is successful or failed.
           ''',
     ),
-    Block(
-      blockXml:
-          '''<block type="status">        <value name="status_variable">            <block type="variables_get">                <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>            </block>        </value>        <value name="function_variable">            <block type="chrome_download_path">                <value name="NAME">                    <block type="text">                        <field name="TEXT"></field>                    </block>                </value>                <value name="navigate">                    <block type="variables_get">                        <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>                    </block>                </value>            </block>        </value>    </block>''',
-      name: 'Chrome Download Path',
-      keywords: [
-        'Chrome Download',
-        'Chrome Download Path',
-        'Download',
-        'Chrome'
-      ],
-      shortDescription: '',
-      fullDescription: '''
-  Description:
-    The status chrome block is used to represent getting the status of a chrome driver instance.
-  ''',
-    ),
+
     Block(
       blockXml:
           '''<block type="status">        <value name="status_variable">            <block type="variables_get">                <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>            </block>        </value>        <value name="function_variable">            <block type="chrome_write">                <value name="text">                    <block type="text">                        <field name="TEXT">MyAutoPylot is awesome</field>                    </block>                </value>                <value name="user_visible_text_element">                    <block type="text">                        <field name="TEXT">search</field>                    </block>                </value>                <value name="navigate">                    <block type="variables_get">                        <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>                    </block>                </value>            </block>        </value>    </block>''',
@@ -1631,29 +1427,7 @@ class Block {
     bool: Whether the function is successful or failed.
   ''',
     ),
-    Block(
-      blockXml:
-          '''<block type="status">        <value name="status_variable">            <block type="variables_get">                <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>            </block>        </value>        <value name="function_variable">            <block type="chrome_check_exists">                <field name="element">t</field>                <value name="text">                    <block type="text">                        <field name="TEXT">MyAutoPylot is awesome</field>                    </block>                </value>                <value name="navigate">                    <block type="variables_get">                        <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>                    </block>                </value>            </block>        </value>    </block>''',
-      name: 'Chrome Check Exists',
-      keywords: [
-        'Chrome Check Exists',
-        'Check Exists',
-        'Element Exists',
-        'Chrome'
-      ],
-      shortDescription: '',
-      fullDescription: '''
-  Description:
-      Check if a specific element is found.
-  Args:
-      text (str, optional): To wait until the string appears on the screen.
-            Eg: Export Successful Completed. Defaults: ""
-            element (str, optional): Type of Element Whether its a Text(t) or Button(b).
-            Defaults: "t - Text".
-  Returns:
-      bool: Whether the text is found or not.
-  ''',
-    ),
+
     Block(
       blockXml:
           '''<block type="status">        <value name="status_variable">            <block type="variables_get">                <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>            </block>        </value>        <value name="function_variable">            <block type="chrome_wait_until">                <field name="element">t</field>                <value name="text">                    <block type="text">                        <field name="TEXT">MyAutoPylot is awesome</field>                    </block>                </value>                <value name="navigate">                    <block type="variables_get">                        <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>                    </block>                </value>            </block>        </value>    </block>''',
@@ -2257,22 +2031,7 @@ class Block {
       The lists sort block is used to represent sorting a list.
       ''',
     ),
-    Block(
-      blockXml: '''
-      <block type="excel_concat_all_sheets_of_given_excel">        <field name="data" id="U#-~hkY|E~Kap0iE},[">DATA</field>        <value name="excel_file_path">          <block type="text">            <field name="TEXT"></field>          </block>        </value>        <value name="sheet_names_as_list">          <block type="lists_create_with" inline="true">            <mutation items="2"></mutation>            <value name="ADD0">              <block type="text">                <field name="TEXT"></field>              </block>            </value>            <value name="ADD1">              <block type="text">                <field name="TEXT"></field>              </block>            </value>          </block>        </value>      </block>''',
-      name: 'Concat All Sheets of Given Excel',
-      keywords: [
-        'Concat All Sheets of Given Excel',
-        'Concat',
-        'Excel',
-        'Dataframe',
-        'Merge',
-      ],
-      shortDescription: '',
-      fullDescription: '''
-      The excel concat all sheets of given excel block is used to represent concatenating all sheets of a given excel file.
-      ''',
-    ),
+
     Block(
       blockXml:
           '''<block type="folder_delete_file_or_folder">        <field name="print_status">TRUE</field>        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>        <value name="file_or_folder_path">          <block type="text">            <field name="TEXT"></field>          </block>        </value>      </block>''',
@@ -2368,29 +2127,7 @@ class Block {
       This block is used to get the path of the file.
       ''',
     ),
-    Block(
-      blockXml:
-          '''<block type="df_convert_column_to_type">        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>        <field name="data" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>        <value name="df">          <block type="variables_get">            <field name="VAR" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>          </block>        </value>        <value name="column_name">          <block type="text">            <field name="TEXT"></field>          </block>        </value>        <value name="column_type">          <block type="text">            <field name="TEXT"></field>          </block>        </value>      </block>''',
-      name: 'Dataframe Change Column Type',
-      keywords: ['Dataframe', 'Change', 'Column', 'Type', 'Excel'],
-      shortDescription: '',
-      fullDescription: '''
-      Description:
-          Converts a column type of a dataframe to a given type
-          Column type doesn't persist after writing to excel
 
-      Args:
-          df : dataframe
-
-          column_name : Single column name or list of column names
-
-          column_type : column type to be converted to like string, int, float, date, boolean, complex, bytes, etc.
-
-      Returns:
-          [data]
-          data : The modified dataframe object
-      ''',
-    ),
     // Python  Ends
   ];
 }
