@@ -59,7 +59,6 @@
 <body>
   <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
     <category name="Python" css-icon="pythonIcon lab la-python" css-container="customTreeRow python" colour="#FDB827">
-
       <category name="Logic" css-icon="customIcon las la-arrows-alt" colour="#4C97FF">
         <!-- <category name="Logic" css-icon="customIcon las la-arrows-alt" colour="${LOGIC_CATEGORY_COLOUR}"> -->
         <block type="controls_if"></block>
@@ -413,7 +412,8 @@
       <block type="lists_create_with">
         <mutation items="3"></mutation>
       </block>
-      <block type="controls_if"></block>
+      <block type="controls_if">
+      </block>
       <block type="logic_compare">
         <field name="OP">EQ</field>
       </block>
@@ -568,37 +568,6 @@
           </block>
         </value>
       </block>
-      <block type="date_time_now">
-        <field name="date" id="ee}a,2EGP$6V,)g}Yld|">DATE</field>
-      </block>
-      <block type="add_datetime">
-        <field name="time_type">days</field>
-        <field name="date" id="ee}a,2EGP$6V,)g}Yld|">DATE</field>
-        <value name="input_date">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="value">
-          <block type="math_number">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-      </block>
-      <block type="subtract_datetime">
-        <field name="time_type">days</field>
-        <field name="date" id="ee}a,2EGP$6V,)g}Yld|">DATE</field>
-        <value name="input_date">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="value">
-          <block type="math_number">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-      </block>
     </category>
     <category name="Mouse" css-icon="categoryIcon las la-mouse" colour="#42668B">
       <block type="controls_if">
@@ -649,43 +618,6 @@
         <value name="no_of_clicks">
           <block type="math_number">
             <field name="NUM">1</field>
-          </block>
-        </value>
-      </block>
-      <block type="mouse_move">
-        <field name="type_of_movement">abs</field>
-        <field name="status" id="A3JH(F4iaa#67-C,*i$E">STATUS</field>
-        <value name="x">
-          <block type="math_number">
-            <field name="NUM">10</field>
-          </block>
-        </value>
-        <value name="y">
-          <block type="math_number">
-            <field name="NUM">20</field>
-          </block>
-        </value>
-      </block>
-      <block type="mouse_drag_from_to">
-        <field name="status" id="A3JH(F4iaa#67-C,*i$E">STATUS</field>
-        <value name="x1">
-          <block type="math_number">
-            <field name="NUM">10</field>
-          </block>
-        </value>
-        <value name="y1">
-          <block type="math_number">
-            <field name="NUM">10</field>
-          </block>
-        </value>
-        <value name="x2">
-          <block type="math_number">
-            <field name="NUM">500</field>
-          </block>
-        </value>
-        <value name="y2">
-          <block type="math_number">
-            <field name="NUM">500</field>
           </block>
         </value>
       </block>
@@ -909,93 +841,6 @@
           </block>
         </value>
       </block>
-      <block type="excel_concat_all_sheets_of_given_excel">
-        <field name="data" id="U#-~hkY|E~Kap$0iE},[">DATA</field>
-        <value name="excel_file_path">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="sheet_names_as_list">
-          <block type="lists_create_with" inline="true">
-            <mutation items="2"></mutation>
-            <value name="ADD0">
-              <block type="text">
-                <field name="TEXT"></field>
-              </block>
-            </value>
-            <value name="ADD1">
-              <block type="text">
-                <field name="TEXT"></field>
-              </block>
-            </value>
-          </block>
-        </value>
-      </block>
-      <block type="excel_copy_range_from_sheet_new">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <field name="data" id="H@JeN;pf,Rpec+P9x`U4">COPIED_DATA</field>
-        <value name="input_filepath">
-          <block type="text">
-            <field name="TEXT">Filepath</field>
-          </block>
-        </value>
-        <value name="input_sheetname">
-          <block type="text">
-            <field name="TEXT">Sheet 1</field>
-          </block>
-        </value>
-        <value name="start_col">
-          <block type="math_number">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <value name="start_row">
-          <block type="math_number">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <value name="end_col">
-          <block type="math_number">
-            <field name="NUM">3</field>
-          </block>
-        </value>
-        <value name="end_row">
-          <block type="math_number">
-            <field name="NUM">3</field>
-          </block>
-        </value>
-        <next>
-          <block type="excel_paste_range_to_sheet">
-            <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-            <value name="input_filepath">
-              <block type="text">
-                <field name="TEXT">Filepath</field>
-              </block>
-            </value>
-            <value name="input_sheetname">
-              <block type="text">
-                <field name="TEXT">Sheet 1</field>
-              </block>
-            </value>
-            <value name="start_col">
-              <block type="math_number">
-                <field name="NUM">1</field>
-              </block>
-            </value>
-            <value name="start_row">
-              <block type="math_number">
-                <field name="NUM">1</field>
-              </block>
-            </value>
-            <value name="copied_data">
-              <block type="variables_get">
-                <field name="VAR" id="H@JeN;pf,Rpec+P9x`U4">COPIED_DATA</field>
-              </block>
-            </value>
-          </block>
-        </next>
-      </block>
       <block type="excel_get_all_header_columns_new">
         <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
         <field name="data" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>
@@ -1071,25 +916,6 @@
           </block>
         </value>
       </block>
-      <block type="df_convert_column_to_type">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <field name="data" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>
-        <value name="df">
-          <block type="variables_get">
-            <field name="VAR" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>
-          </block>
-        </value>
-        <value name="column_name">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="column_type">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
       <block type="excel_clear_sheet_new">
         <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
         <field name="data" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>
@@ -1122,99 +948,6 @@
           </block>
         </value>
         <value name="column_name">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
-      <block type="excel_group_by_column_values_n_split_new">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <value name="df">
-          <block type="variables_get">
-            <field name="VAR" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>
-          </block>
-        </value>
-        <value name="column_name">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="output_folder">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="output_filename">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
-      <block type="excel_if_value_exists_new">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <value name="df">
-          <block type="variables_get">
-            <field name="VAR" id="fzNXQc/~4k|pC6r:o?/5">DATA</field>
-          </block>
-        </value>
-        <value name="cols">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="value">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
-      <block type="excel_apply_template_format_new">
-        <field name="same_file">TRUE</field>
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <value name="input_filepath">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="input_sheetname">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="input_template_filepath">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="input_template_sheetname">
-          <block type="math_number">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-        <value name="output_folder">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="output_filename">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
-      <block type="excel_merge_all_files_new">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <value name="input_filepath">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="output_folder">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="output_filename">
           <block type="text">
             <field name="TEXT"></field>
           </block>
@@ -1380,7 +1113,6 @@
           </block>
         </value>
       </block>
-
     </category>
     <category name="String" css-icon="categoryIcon las la-font" colour="#025451">
       <block type="controls_if">
@@ -1441,28 +1173,6 @@
           </block>
         </value>
       </block>
-      <block type="string_extract_substring">
-        <field name="include_start_word">FALSE</field>
-        <field name="include_end_word">FALSE</field>
-        <field name="status" id="_HQ{;aZo^-dUfz*w]5-Y">STATUS</field>
-        <field name="data" id="G4~!gK1w3iCRU(iYUDLM">DATA</field>
-        <value name="string">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="start_word">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="end_word">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
-
     </category>
     <category name="Folder" css-icon="categoryIcon las la-folder" colour="#800080">
       <block type="controls_if">
@@ -1590,20 +1300,6 @@
           </block>
         </value>
       </block>
-      <block type="file_get_json_details">
-        <field name="status" id="m,f`^=#eZ|R*fFAlBL_f">STATUS</field>
-        <field name="data" id="!r=cbAny(v?V_m[/yjz4">DATA</field>
-        <value name="path_of_json_file">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="section">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
     </category>
     <category name="Windows" css-icon="categoryIcon lab la-windows" colour="#a56e5b">
       <block type="controls_if">
@@ -1656,15 +1352,7 @@
           </block>
         </value>
       </block>
-      <block type="window_restore_windows">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <value name="windowName">
-          <block type="text">
-            <field name="TEXT">Notepad</field>
-          </block>
-        </value>
-      </block>
-      <block type="window_activate_and_maximize_windows">
+      <block type="window_maximize_windows">
         <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
         <value name="windowName">
           <block type="text">
@@ -1744,27 +1432,7 @@
           </block>
         </value>
       </block>
-      <block type="status">
-        <value name="status_variable">
-          <block type="variables_get">
-            <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
-          </block>
-        </value>
-        <value name="function_variable">
-          <block type="chrome_download_path">
-            <value name="download_path">
-              <block type="text">
-                <field name="TEXT"></field>
-              </block>
-            </value>
-            <value name="navigate">
-              <block type="variables_get">
-                <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
-              </block>
-            </value>
-          </block>
-        </value>
-      </block>
+      
       <block type="status">
         <value name="status_variable">
           <block type="variables_get">
@@ -1861,55 +1529,7 @@
           </block>
         </value>
       </block>
-      <block type="status">
-        <value name="status_variable">
-          <block type="variables_get">
-            <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
-          </block>
-        </value>
-        <value name="function_variable">
-          <block type="chrome_check_exists">
-            <field name="element">t</field>
-            <value name="text">
-              <block type="text">
-                <field name="TEXT">MyAutoPylot is awesome</field>
-              </block>
-            </value>
-            <value name="navigate">
-              <block type="variables_get">
-                <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
-              </block>
-            </value>
-          </block>
-        </value>
-      </block>
-      <block type="status">
-        <value name="status_variable">
-          <block type="variables_get">
-            <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
-          </block>
-        </value>
-        <value name="function_variable">
-          <block type="chrome_wait_until_v2">
-            <field name="element">t</field>
-            <value name="text">
-              <block type="text">
-                <field name="TEXT">MyAutoPylot is awesome</field>
-              </block>
-            </value>
-            <value name="delay">
-              <block type="math_number">
-                <field name="NUM">10</field>
-              </block>
-            </value>
-            <value name="navigate">
-              <block type="variables_get">
-                <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
-              </block>
-            </value>
-          </block>
-        </value>
-      </block>
+     
       <block type="status">
         <value name="status_variable">
           <block type="variables_get">
@@ -1947,63 +1567,8 @@
           </block>
         </value>
       </block>
-      <block type="status_data">
-        <value name="status_variable">
-          <block type="variables_get">
-            <field name="VAR" id="EV/Gw}Bxj$#rCpn4Gcgm">status</field>
-          </block>
-        </value>
-        <value name="data_variable">
-          <block type="variables_get">
-            <field name="VAR" id="+s^@u,R^NR,1+6*$9c[;">data</field>
-          </block>
-        </value>
-        <value name="function_variable">
-          <block type="get_value_relatively">
-            <value name="above">
-              <block type="text">
-                <field name="TEXT"></field>
-              </block>
-            </value>
-            <value name="below">
-              <block type="text">
-                <field name="TEXT"></field>
-              </block>
-            </value>
-            <value name="to_left_of">
-              <block type="text">
-                <field name="TEXT"></field>
-              </block>
-            </value>
-            <value name="to_right_of">
-              <block type="text">
-                <field name="TEXT"></field>
-              </block>
-            </value>
-          </block>
-        </value>
-      </block>
-      <block type="status_data">
-        <value name="status_variable">
-          <block type="variables_get">
-            <field name="VAR" id="EV/Gw}Bxj$#rCpn4Gcgm">status</field>
-          </block>
-        </value>
-        <value name="data_variable">
-          <block type="variables_get">
-            <field name="VAR" id="+s^@u,R^NR,1+6*$9c[;">data</field>
-          </block>
-        </value>
-        <value name="function_variable">
-          <block type="get_text">
-            <value name="get_element_image">
-              <block type="text">
-                <field name="TEXT"></field>
-              </block>
-            </value>
-          </block>
-        </value>
-      </block>
+      
+      
       <block type="status_data">
         <value name="status_variable">
           <block type="variables_get">
@@ -2284,29 +1849,6 @@
       <block type="print_ap">
         <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
       </block>
-      <block type="mail_send_via_desktop_outlook">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <value name="to_email_id">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="subject">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="message">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="attachment_path">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
       <block type="mail_send_gmail_with_app_password">
         <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
         <value name="gmail_username">
@@ -2427,27 +1969,6 @@
           </block>
         </value>
       </block>
-      <block type="msg_box_ask_yes_no">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <value name="msg_for_user">
-          <block type="text">
-            <field name="TEXT">Is My AutoPylot Awesome ?</field>
-          </block>
-        </value>
-      </block>
-      <block type="msg_count_down">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <value name="msg_for_user">
-          <block type="text">
-            <field name="TEXT">Starting in</field>
-          </block>
-        </value>
-        <value name="default_time">
-          <block type="math_number">
-            <field name="NUM">5</field>
-          </block>
-        </value>
-      </block>
     </category>
     <category name="PDF" css-icon="categoryIcon lar la-file-pdf" colour="#6D1010">
       <block type="controls_if">
@@ -2495,90 +2016,6 @@
           </block>
         </value>
         <value name="output_file_name">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
-      <block type="pdf_extract_table">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <field name="data" id="U#-~hkY|E~Kap$0iE},[">DATA</field>
-        <value name="pdf_file_path">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="table_number">
-          <block type="math_number">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <value name="page_number">
-          <block type="math_number">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-      </block>
-    </category>
-    <category name="Citrix" css-icon="categoryIcon las la-server" colour="#2672A1">
-      <block type="controls_if">
-        <mutation else="1"></mutation>
-        <value name="IF0">
-          <block type="logic_compare">
-            <field name="OP">EQ</field>
-            <value name="A">
-              <block type="variables_get">
-                <field name="VAR" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="logic_boolean">
-                <field name="BOOL">TRUE</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO0">
-          <block type="print_ap">
-            <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-          </block>
-        </statement>
-        <statement name="ELSE">
-          <block type="print_ap">
-            <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-          </block>
-        </statement>
-      </block>
-      <block type="print_ap">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-      </block>
-      <block type="citrix_scrape_contents_by_search_copy_paste">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-        <value name="highlight_text">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
-      <block type="citrix_window_clear_search">
-        <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
-      </block>
-      <block type="screen_scrape_extract_table">
-        <field name="include_after_this_word">FALSE</field>
-        <field name="include_before_this_word">FALSE</field>
-        <field name="status" id="_HQ{;aZo^-dUfz*w]5-Y">STATUS</field>
-        <field name="data" id="G4~!gK1w3iCRU(iYUDLM">DATA</field>
-        <value name="switch_to_window">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name=",after_this_word">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="before_this_word">
           <block type="text">
             <field name="TEXT"></field>
           </block>

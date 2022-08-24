@@ -339,7 +339,7 @@ class Block {
     ),
     Block(
       blockXml:
-          '<block type="window_activate_and_maximize_windows"> <field name="status" id=":ulA-E6LLi-c7ikn!(%">STATUS</field> <value name="windowName"> <block type="text"> <field name="TEXT">Notepad</field> </block> </value> </block>',
+          '<block type="window_maximize_windows"> <field name="status" id=":ulA-E6LLi-c7ikn!(%">STATUS</field> <value name="windowName"> <block type="text"> <field name="TEXT">Notepad</field> </block> </value> </block>',
       name: 'Activate and Maximize Window',
       keywords: ['activate', 'maximize', 'window'],
       shortDescription: 'Activates and Maximizes the given window',
